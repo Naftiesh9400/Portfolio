@@ -563,57 +563,126 @@
               </div>
               <!-- ===== Contact info item end ====== -->
               
-            </div>
-            <h3 class="contact-title padd-15">SEND ME AN EMAIL</h3> 
             
-            
-            
-             <div class="row">
-              <div class="contact-form padd-15">
-                <div class="row">
-                  <div class="form-item col-6 padd-15">
-                    <div class="form-group">
-                      <input
-                        type="text"
-                        class="form-control"
-                        placeholder="Name" />
-                    </div>
+              <!DOCTYPE html>
+              <html lang="en">
+              <head>
+                  <meta charset="UTF-8">
+                  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                  <title>Contact Form</title>
+                  <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file if needed -->
+                  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+                  <script type="text/javascript">
+                      (function() {
+                          emailjs.init("nasBUoZ7Kc1_7gOn3"); // Replace with your public key
+                      })();
+              
+                      function sendMail() {
+                          let params = {
+                              name: document.getElementById("name").value,
+                              email: document.getElementById("email").value,
+                              subject: document.getElementById("subject").value,
+                              message: document.getElementById("message").value,
+                          };
+              
+                          emailjs.send("service_3thhv2s", "template_lhkiwhl", params) // Replace with your service ID and template ID
+                              .then(function(response) {
+                                  alert("Email sent successfully!");
+                                  console.log("SUCCESS!", response.status, response.text);
+                              }, function(error) {
+                                  alert("Failed to send email. Please try again.");
+                                  console.log("FAILED...", error);
+                              });
+                      }
+                  </script>
+              </head>
+              <body>
+                  <div class="container">
+                      <h3 class="contact-title padd-15">SEND ME AN EMAIL</h3>
+                      <div class="row">
+                          <div class="contact-form padd-15">
+                              <div class="row">
+                                  <div class="form-item col-6 padd-15">
+                                      <div class="form-group">
+                                          <input type="text" id="name" class="form-control" placeholder="Name" required />
+                                      </div>
+                                  </div>
+                                  <div class="form-item col-6 padd-15">
+                                      <div class="form-group">
+                                          <input type="email" id="email" class="form-control" placeholder="Email" required />
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="row">
+                                  <div class="form-item col-12 padd-15">
+                                      <div class="form-group">
+                                          <input type="text" id="subject" class="form-control" placeholder="Subject" required />
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="row">
+                                  <div class="form-item col-12 padd-15">
+                                      <div class="form-group">
+                                          <textarea id="message" class="form-control" placeholder="Message" required></textarea>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="row">
+                                  <div class="form-item col-12 padd-15">
+                                      <button type="button" onclick="sendMail()" class="btn">Send Message</button>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
                   </div>
-                  <div class="form-item col-6 padd-15">
-                    <div class="form-group">
-                      <input
-                        type="email"
-                        class="form-control"
-                        placeholder="Email" />
-                    </div>
+              </body>
+              </html>
+              
+              <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+              <script type="text/javascript">
+                  (function() {
+                      emailjs.init("nasBUoZ7Kc1_7gOn3");
+                  })();
+              </script>
+              <script>src="js\script (2).js"</script>
+              <h3 class="contact-title padd-15">SEND ME AN EMAIL</h3>
+              
+              <div class="row">
+                  <div class="contact-form padd-15">
+                      <div class="row">
+                          <div class="form-item col-6 padd-15">
+                              <div class="form-group">
+                                  <input type="text" id="name" class="form-control" placeholder="Name" />
+                              </div>
+                          </div>
+                          <div class="form-item col-6 padd-15">
+                              <div class="form-group">
+                                  <input type="email" id="email" class="form-control" placeholder="Email" />
+                              </div>
+                          </div>
+                      </div>
+                      <div class="row">
+                          <div class="form-item col-12 padd-15">
+                              <div class="form-group">
+                                  <input type="text" id="subject" class="form-control" placeholder="Subject" />
+                              </div>
+                          </div>
+                      </div>
+                      <div class="row">
+                          <div class="form-item col-12 padd-15">
+                              <div class="form-group">
+                                  <textarea id="message" class="form-control" placeholder="Message"></textarea>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="row">
+                          <div class="form-item col-12 padd-15">
+                              <button type="button" onclick="sendMail()" class="btn">Send Message</button>
+                          </div>
+                      </div>
                   </div>
-                </div>
-                <div class="row">
-                  <div class="form-item col-12 padd-15">
-                    <div class="form-group">
-                      <input
-                        type="text"
-                        class="form-control"
-                        placeholder="Subject" />
-                    </div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="form-item col-12 padd-15">
-                    <div class="form-group">
-                      <textarea
-                        name=""
-                        class="form-control"
-                        id=""
-                        placeholder="Message"></textarea>
-                    </div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="form-item col-12 padd-15">
-                    <button type="submit" class="btn">Send Message</button>
-                    
-                  </div>
+              </div> -->
+
                 </div>
               </div>
             </div>
