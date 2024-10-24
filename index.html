@@ -469,8 +469,57 @@
           <iframe width="360" height="210" src="https://www.youtube.com/embed/hKRFl5vfN9c" frameborder="0" allowfullscreen style="border-radius: 15px;"></iframe>
       </div>
   </div>
-  
   <div class="portfolio-heading padd-15" style="margin-top: 30px;">
+    <h2>YouTube Shorts:</h2>
+</div>
+<div class="youtube-shorts-container" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+    <div class="portfolio-video" style="flex: 1 1 210px; max-width: 210px; max-height: 350px; border-radius: 15px; overflow: hidden; border: 3px solid #ffffff;">
+        <iframe width="210" height="350" src="https://www.youtube.com/embed/G2srZwUkzA8" frameborder="0" allowfullscreen style="border-radius: 15px;"></iframe>
+    </div>
+    <div class="portfolio-video" style="flex: 1 1 210px; max-width: 210px; max-height: 350px; border-radius: 15px; overflow: hidden; border: 3px solid #ffffff;">
+        <iframe width="210" height="350" src="https://www.youtube.com/embed/WgfnavQrJno" frameborder="0" allowfullscreen style="border-radius: 15px;"></iframe>
+    </div>
+    <div class="portfolio-video" style="flex: 1 1 210px; max-width: 210px; max-height: 350px; border-radius: 15px; overflow: hidden; border: 3px solid #ffffff;">
+        <iframe width="210" height="350" src="https://www.youtube.com/embed/wHVJCaOWrjQ" frameborder="0" allowfullscreen style="border-radius: 15px;"></iframe>
+    </div>
+    <div class="portfolio-video" style="flex: 1 1 210px; max-width: 210px; max-height: 350px; border-radius: 15px; overflow: hidden; border: 3px solid #ffffff;">
+        <iframe width="210" height="350" src="https://www.youtube.com/embed/w2o_HHvA7KU" frameborder="0" allowfullscreen style="border-radius: 15px;"></iframe>
+    </div>
+    <div class="portfolio-video" style="flex: 1 1 210px; max-width: 210px; max-height: 350px; border-radius: 15px; overflow: hidden; border: 3px solid #ffffff;">
+        <iframe width="210" height="350" src="https://www.youtube.com/embed/y4VL2d9M2k4" frameborder="0" allowfullscreen style="border-radius: 15px;"></iframe>
+    </div>
+</div>
+
+<style>
+    .youtube-shorts-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; /* Center videos horizontally */
+        gap: 20px; /* Space between videos */
+    }
+
+    .portfolio-video {
+        flex: 1 1 210px; /* Allow flexibility for smaller screens */
+        max-width: 210px; /* Set maximum width */
+        border-radius: 15px;
+        overflow: hidden;
+        border: 3px solid #ffffff;
+    }
+
+    @media (max-width: 768px) {
+        .portfolio-video {
+            flex: 1 1 calc(50% - 10px); /* Two videos per row on medium screens */
+        }
+    }
+
+    @media (max-width: 480px) {
+        .portfolio-video {
+            flex: 1 1 calc(100% - 10px); /* One video per row on small screens */
+        }
+    }
+</style>
+
+  <!-- <div class="portfolio-heading padd-15" style="margin-top: 30px;">
       <h2>YouTube Shorts:</h2>
   </div>
   <div class="row" style="display: flex; gap: 20px;">
@@ -489,7 +538,7 @@
       <div class="portfolio-video" style="flex: 1; max-width: 210px; max-height: 350px; border-radius: 15px; overflow: hidden; border: 3px solid #ffffff;">
           <iframe width="210" height="350" src="https://www.youtube.com/embed/y4VL2d9M2k4" frameborder="0" allowfullscreen style="border-radius: 15px;"></iframe>
       </div>
-  </div>
+  </div> -->
   
   <!-- GitHub Portfolio Link Section -->
 <div class="portfolio-heading padd-15" style="margin-top: 30px;">
