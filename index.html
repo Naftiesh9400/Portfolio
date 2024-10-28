@@ -5,18 +5,61 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Naresh Portfolio</title>
     <!-- ===== CSS Files ===== -->
+    <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Naresh Portfolio</title>
+      <!-- Bootstrap CSS -->
+     <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Naresh Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Naresh Portfolio</title>
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+      
+      <!-- Custom CSS -->
+      <link rel="stylesheet" href="css/style.css" />
+      
+      <style>
+          /* Custom styles for the headlines */
+          .hello, .my-profession {
+              font-weight: bold; /* Makes headlines bold */
+          }
+  
+          /* Regular font for the rest of the text */
+          p, .regular-text {
+              font-weight: normal; /* Ensures paragraph text is regular */
+          }
+      </style>
+  </head>
+  
+
+    
+    <title>Naresh Portfolio</title>
+    
+    <!-- Custom CSS Files -->
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/skins/color-1.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
-    <!-- ====== Style Switcher ====== -->
+    
+    <!-- Style Switcher -->
     <link rel="stylesheet" href="css/skins/color-1.css" class="alternate-style" title="color-1" disabled />
     <link rel="stylesheet" href="css/skins/color-2.css" class="alternate-style" title="color-2" disabled />
     <link rel="stylesheet" href="css/skins/color-3.css" class="alternate-style" title="color-3" disabled />
     <link rel="stylesheet" href="css/skins/color-4.css" class="alternate-style" title="color-4" disabled />
     <link rel="stylesheet" href="css/skins/color-5.css" class="alternate-style" title="color-5" disabled />
     <link rel="stylesheet" href="css/style-switcher.css" />
+    
+    <!-- ====== Style Switcher ====== -->
 </head>
 
 <body>
@@ -38,13 +81,13 @@
                     <a href="#about"><i class="fa fa-user"></i> About</a>
                 </li>
                 <li>
-                    <a href="#services"><i class="fa fa-list"></i>Services</a>
+                    <a href="#services"><i class="fa fa-list"></i> Services</a>
                 </li>
                 <li>
-                    <a href="#portfolio"><i class="fa fa-briefcase"></i>Portfolio</a>
+                    <a href="#portfolio"><i class="fa fa-briefcase"></i> Portfolio</a>
                 </li>
                 <li>
-                    <a href="#contact"><i class="fa fa-comments"></i>Contact</a>
+                    <a href="#contact"><i class="fa fa-comments"></i> Contact</a>
                 </li>
             </ul>
         </div>
@@ -57,22 +100,59 @@
                     <div class="row">
                         <div class="home-info padd-15">
                             <h3 class="hello">
-                                Hi, I am <span class="name">  Naresh Mandal.</span>
+                                Hi, I am <span class="name"> Naresh Mandal.</span>
                             </h3>
                             <h3 class="my-profession">
-                                I' m a <span class="typing">web designer</span>
+                                I'm a <span class="typing">web designer</span>
                             </h3>
                             <p>
-                              I am a designer with three years of experience, specializing in creating user-centered designs that enhance the overall user experience. In addition to my design skills, My Expertise is to Design & Develop Softwares, Graphics Design, Video Editing and many more...
+                                I am a designer with three years of experience, specializing in creating user-centered designs that enhance the overall user experience. In addition to my design skills, my expertise includes software design and development, graphic design, video editing, and more.
                             </p>
                             <a href="Naresh Mandal.pdf" target="_blank" class="btn">Download CV</a>
+                            <a href="#" class="btn" data-toggle="modal" data-target="#cvModal">View CV</a>
                         </div>
                         <div class="home-img padd-15">
-                            <img src="images/hero.jpg" alt="" />
+                            <img src="images/hero.jpg" alt="Image 1" />
                         </div>
                     </div>
                 </div>
             </section>
+
+            <!-- Modal for CV -->
+            <div class="modal fade" id="cvModal" tabindex="-1" role="dialog" aria-labelledby="cvModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="cvModalLabel">My CV</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <embed src="Naresh Mandal.pdf" type="application/pdf" width="100%" height="500px" />
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- ===== Main Content End ===== -->
+    </div>
+
+    <!-- Bootstrap and jQuery scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
+
+
+
+
             <!-- ===== Home Section End ===== -->
             <!-- ===== About Section Start ===== -->
             <section class="about section" id="about">
